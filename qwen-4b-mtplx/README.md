@@ -2,7 +2,7 @@
 
 Apple Silicon 本地 LLM 运行器 mtplx 启动 Qwen MTP（多 token 预测投机解码）优化模型。MTP 头做投机解码，同模型约 1.1–2.2x 加速，无需第二套草稿模型（Leviathan & Chen 拒绝采样，数学精确）。
 
-> 目录名 `qwen3.6-7b-mtplx` 为习惯叫法。**官方不存在 "Qwen3.6-7B" MTP 模型**：Qwen3.6 家族仅 27B / 35B（16G 跑不动）；实测可用的是 Qwen3.5 系 MTP 优化版（HF 官方目录核实）。
+> 本目录部署 **Qwen3.5-4B-MTPLX-Optimized-Speed**（4-bit）。官方不存在 "Qwen3.6-7B" MTP 型号（Qwen3.6 家族仅 27B/35B，16G 跑不动）；9B 备选见下文。
 
 ## 安装 / Install
 

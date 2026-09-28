@@ -7,7 +7,7 @@ Tested local LLM setups on Apple Silicon (M2, 16GB unified memory). Each model l
 
 | 模型 Model | 运行器 Runtime | 量化 Quant | 磁盘 Disk | 实测性能 Perf (M2 16G) | 定位 Role |
 |---|---|---|---|---|---|
-| [Qwen3.5-4B/9B (MTP)](qwen3.6-7b-mtplx/) | mtplx | 4-bit / 6-bit | 2.6 / 8.7 GB | ~30 tok/s（MTP depth 2, 1.13x AR） | 主力编码 / Main workhorse |
+| [Qwen3.5-4B/9B (MTP)](qwen-4b-mtplx/) | mtplx | 4-bit / 6-bit | 2.6 / 8.7 GB | ~30 tok/s（MTP depth 2, 1.13x AR） | 主力编码 / Main workhorse |
 | [LFM2.5-2.6B](lfm2.5-2.6b/) | llama.cpp b10752 | Q5_K_M | 1.8 GB | — | 轻量日常 / Lightweight daily |
 | [Ling-3.0-Tiny](ling-3.0-tiny/) | llama.cpp b10752 | Q4_K_M | 4.5 GB | 40–52 tok/s | 复杂 Agent / Complex agent tasks |
 | [Spark-X2.5-1.7B](spark-x2.5-1.7b/) | llama.cpp fork | BF16 | 3.2 GB | prefill 130 / decode 24.6 tok/s | 长上下文 / Long context |
@@ -20,7 +20,7 @@ Tested local LLM setups on Apple Silicon (M2, 16GB unified memory). Each model l
 
 | 目录 | 依赖 | 模型来源 |
 |---|---|---|
-| `qwen3.6-7b-mtplx/` | `pip install mtplx` | `Youssofal/Qwen3.5-4B-MTPLX-Optimized-Speed` (HF) |
+| `qwen-4b-mtplx/` | `pip install mtplx` | `Youssofal/Qwen3.5-4B-MTPLX-Optimized-Speed` (HF) |
 | `lfm2.5-2.6b/` | llama.cpp b10752 二进制 | LiquidAI `LFM2.5-2.6B-GGUF` |
 | `ling-3.0-tiny/` | llama.cpp b10752 二进制 | inclusionAI `Ling-3.0-tiny-GGUF`（魔搭镜像） |
 | `spark-x2.5-1.7b/` | Spark2_5 fork 源码编译 | Spark-X2.5-1.7B GGUF（fork 内转换脚本） |
